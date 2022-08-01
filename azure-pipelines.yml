@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+resources:
+  webhooks:
+    - webhook: workitem-state-changed          ### Webhook alias
+      connection: workitem-state-changed    ### Incoming webhook service connection
+      # filters:
+      #   - path: repositoryName      ### JSON path in the payload
+      #     value: maven-releases     ### Expected value in the path provided
+      #   - path: action
+      #     value: CREATED
+steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    ### JSON payload data is available in the form of ${{ parameters.<WebhookAlias>.<JSONPath>}}
+    script: |
+      Write-Host ${{ parameters.MyWebhookTrigger.repositoryName}}
+      Write-Host ${{ parameters.MyWebhookTrigger.component.group}}
