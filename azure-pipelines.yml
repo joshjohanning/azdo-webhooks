@@ -11,8 +11,8 @@ pool:
 
 resources:
   webhooks:
-    - webhook: workitem-state-changed          ### Webhook alias
-      connection: workitem-state-changed    ### Incoming webhook service connection
+    - webhook: workitem          ### Webhook alias
+      connection: workitem    ### Incoming webhook service connection
       # filters:
       #   - path: repositoryName      ### JSON path in the payload
       #     value: maven-releases     ### Expected value in the path provided
