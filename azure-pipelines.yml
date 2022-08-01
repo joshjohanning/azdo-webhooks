@@ -24,7 +24,6 @@ steps:
     targetType: 'inline'
     ### JSON payload data is available in the form of ${{ parameters.<WebhookAlias>.<JSONPath>}}
     script: |
-      Write-Host ${{ parameters.workitem}}
-      Write-Host ${{ parameters.workitem.repositoryName}}
-      Write-Host ${{ parameters.workitem.component.group}}
-      
+      write-host "Work item ID - ${{ parameters.workitem.resource.workItemId }}"
+      write-host "Work item title - ${{ parameters.workitem.resource.fields.System.State }}"
+      write-host "Work item state - ${{ parameters.workitem.resource.fields.System.Title }}"
