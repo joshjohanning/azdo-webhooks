@@ -1,7 +1,7 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# for more info on gotchas, see: 
+# https://developercommunity.visualstudio.com/t/cannot-use-generic-webhook-based-triggers-for-yaml/1135943?viewtype=all
+
+# NOTE: Pipeline has to be valid in order for webhook to fire
 
 trigger: none
 
