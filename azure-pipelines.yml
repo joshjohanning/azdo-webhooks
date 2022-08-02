@@ -1,3 +1,6 @@
+# documentation from sprint notes: 
+# https://docs.microsoft.com/en-us/azure/devops/release-notes/2020/pipelines/sprint-172-update#generic-webhook-based-triggers-for-yaml-pipelines
+
 # for more info on gotchas, see: 
 # https://developercommunity.visualstudio.com/t/cannot-use-generic-webhook-based-triggers-for-yaml/1135943?viewtype=all
 
